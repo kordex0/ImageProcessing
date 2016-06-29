@@ -1,8 +1,8 @@
 
-from glob import glob
+from glob import glob as gb
 import cv2
 
-def filenames(patterns, ordered=False):
+def glob(patterns, ordered=False):
     if isinstance(patterns, list):
         if ordered:
             l = []
