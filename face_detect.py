@@ -1,12 +1,14 @@
 import cv2
 import sys
 
+from utils.cascadeutils import get_cascade
+
 # Get user supplied values
 cap = cv2.VideoCapture(0)
 
 # Create the haar cascade
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+face_cascade = get_cascade('haarcascade_frontalface_default.xml')
+eye_cascade = get_cascade('haarcascade_eye.xml')
 
 while(True):
     _, img = cap.read()
